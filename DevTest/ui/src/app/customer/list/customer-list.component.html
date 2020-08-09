@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of customer$ | async">
+      <td>{{ cust.name }}</td>
+      <td>{{ cust.type | formatCustomerType }}</td>
+      <td>
+        <a [routerLink]="['/customer', cust.customerId]">Open</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+<form  [formGroup]="customerFormGroup" class="form">
+  <label for="name">Customer Name *</label>
+  <input  type="text"  name="name"  formControlName="name" required placeholder="Customer Name *" minlength="5"/>
+  <small *ngIf="customerFormControls.name.invalid && customerFormControls.name.touched">The customer name should be least 5 characters.</small>
+  <label for="type">Type *</label>
+  <select name="type" required formControlName="type" placeholder="Please select type *"> 
+    <option [ngValue]="undefined" selected>Please select</option>
+    <option *ngFor="let type of customerTypes" [ngValue]="type.id">{{type.name}}</option>
+  </select>
+  <small *ngIf="customerFormControls.type.invalid && customerFormControls.type.touched">Please select a customer type.</small>
+  <!-- Save btn -->
+  <button type="submit" (click)="createCustomer()" appDebounceClick [disabled]="!customerFormGroup.valid">Add new customer</button>
+</form>

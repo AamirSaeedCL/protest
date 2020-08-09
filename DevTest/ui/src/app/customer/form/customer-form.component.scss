@@ -1,0 +1,20 @@
+form {
+  margin: 1rem;
+
+  label {
+    display: block;
+  }
+
+  input, select, button {
+    display: block;
+    width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  small {
+    color: red;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+}

@@ -1,0 +1,40 @@
+h2 {
+  margin-left: 15px;
+}
+
+form {
+  margin: 15px;
+
+  label {
+    display: block;
+  }
+
+  input, select, button {
+    display: block;
+    width: 250px;
+    margin-bottom: 15px;
+  }
+
+  small {
+    color: red;
+    margin-top: -12px;
+    margin-bottom: 15px;
+    display: block;
+  }
+}
+
+table {
+  margin: 15px;
+  border-collapse: collapse;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    min-width: 100px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #ddd;
+  }
+}
